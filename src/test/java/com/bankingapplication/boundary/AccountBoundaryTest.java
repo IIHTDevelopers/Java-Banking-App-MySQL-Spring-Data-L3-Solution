@@ -36,7 +36,7 @@ public class AccountBoundaryTest {
 	}
 
 	@Test
-	public void testUserNotNull() throws IOException {
+	public void testAccountUserNotNull() throws IOException {
 		AccountDTO accountDTO = new AccountDTO();
 		accountDTO.setUser(null);
 		Set<ConstraintViolation<AccountDTO>> violations = validator.validate(accountDTO);
@@ -96,7 +96,7 @@ public class AccountBoundaryTest {
 	}
 
 	@Test
-	public void testBalanceNotNull() throws IOException {
+	public void testAccountBalanceNotNull() throws IOException {
 		AccountDTO accountDTO = new AccountDTO();
 		accountDTO.setBalance(null);
 		Set<ConstraintViolation<AccountDTO>> violations = validator.validate(accountDTO);
@@ -108,7 +108,7 @@ public class AccountBoundaryTest {
 	}
 
 	@Test
-	public void testBalancePositive() throws IOException {
+	public void testAccountBalancePositive() throws IOException {
 		AccountDTO accountDTO = new AccountDTO();
 		accountDTO.setBalance(new BigDecimal("-100.00"));
 		Set<ConstraintViolation<AccountDTO>> violations = validator.validate(accountDTO);
