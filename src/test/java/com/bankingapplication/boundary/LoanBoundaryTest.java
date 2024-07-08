@@ -36,7 +36,7 @@ public class LoanBoundaryTest {
 	}
 
 	@Test
-	public void testUserNotNull() throws IOException {
+	public void testLoanUserNotNull() throws IOException {
 		LoanDTO loanDTO = new LoanDTO();
 		loanDTO.setUser(null);
 		Set<ConstraintViolation<LoanDTO>> violations = validator.validate(loanDTO);
@@ -48,7 +48,7 @@ public class LoanBoundaryTest {
 	}
 
 	@Test
-	public void testAmountNotNull() throws IOException {
+	public void testLoanAmountNotNull() throws IOException {
 		LoanDTO loanDTO = new LoanDTO();
 		loanDTO.setAmount(null);
 		Set<ConstraintViolation<LoanDTO>> violations = validator.validate(loanDTO);
@@ -60,7 +60,7 @@ public class LoanBoundaryTest {
 	}
 
 	@Test
-	public void testAmountPositive() throws IOException {
+	public void testLoanAmountPositive() throws IOException {
 		LoanDTO loanDTO = new LoanDTO();
 		loanDTO.setAmount(new BigDecimal("-100.00"));
 		Set<ConstraintViolation<LoanDTO>> violations = validator.validate(loanDTO);
@@ -108,7 +108,7 @@ public class LoanBoundaryTest {
 	}
 
 	@Test
-	public void testBalanceNotNull() throws IOException {
+	public void testLoanBalanceNotNull() throws IOException {
 		LoanDTO loanDTO = new LoanDTO();
 		loanDTO.setBalance(null);
 		Set<ConstraintViolation<LoanDTO>> violations = validator.validate(loanDTO);
@@ -120,7 +120,7 @@ public class LoanBoundaryTest {
 	}
 
 	@Test
-	public void testBalancePositive() throws IOException {
+	public void testLoanBalancePositive() throws IOException {
 		LoanDTO loanDTO = new LoanDTO();
 		loanDTO.setBalance(new BigDecimal("-100.00"));
 		Set<ConstraintViolation<LoanDTO>> violations = validator.validate(loanDTO);
