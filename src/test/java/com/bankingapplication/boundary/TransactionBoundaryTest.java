@@ -48,7 +48,7 @@ public class TransactionBoundaryTest {
 	}
 
 	@Test
-	public void testAmountNotNull() throws IOException {
+	public void testTransactionAmountNotNull() throws IOException {
 		TransactionDTO transactionDTO = new TransactionDTO();
 		transactionDTO.setAmount(null);
 		Set<ConstraintViolation<TransactionDTO>> violations = validator.validate(transactionDTO);
@@ -60,7 +60,7 @@ public class TransactionBoundaryTest {
 	}
 
 	@Test
-	public void testAmountPositive() throws IOException {
+	public void testTransactionAmountPositive() throws IOException {
 		TransactionDTO transactionDTO = new TransactionDTO();
 		transactionDTO.setAmount(new BigDecimal("-100.00"));
 		Set<ConstraintViolation<TransactionDTO>> violations = validator.validate(transactionDTO);
